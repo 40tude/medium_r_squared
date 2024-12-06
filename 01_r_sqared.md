@@ -140,12 +140,14 @@ If the ratio equals 1, our model is fantastic—it perfectly matches reality. If
 
 $$R^2 = \frac{\text{Model}}{\text{Measure}} = \frac{\text{Regression}}{\text{Measure}} = \frac{SSR_{\text{regression}}}{SST_{\text{total}}}$$
 
-*Wait, wait… Can you go over that last sentence again? If $R^2 = 0$, does that mean the model is useless and we need to move on?* No, not quite. If $R^2 = 0$, it means the numerator is 0. In other words, there's no difference between our model's predictions and the baseline model's predictions.  
+*Wait, wait… Can you go over that last sentence again? If $R^2 = 0$, does that mean the model is useless and we need to move on?* 
+
+No, not quite. If $R^2 = 0$, it means the numerator is 0. In other words, there's no difference between our model's predictions and the baseline model's predictions.  
 
 To be in this situation, all we'd need to do is lower the green line until it intersects the blue line when $x = x_i$. So, when $R^2 = 1$, the model perfectly matches reality. When $R^2 = 0$, the model isn't useless—it's just no better than the baseline model, which always predicts “average,” “average,” “average,” regardless of the diameter.  
 
 
-That said, it's like with insurance contracts—the devil is in the details. The $R^2$ we just calculated applies only to the specific$x_i$value. What we need is a figure that summarizes the overall performance of our model—a single $R^2$ value that covers all possible $x_i$.  
+That said, it's like with insurance contracts—the devil is in the details. The $R^2$ we just calculated applies only to the specific $x_i$ value. What we need is a figure that summarizes the overall performance of our model—a single $R^2$ value that covers all possible $x_i$.  
 
 To achieve this, we'll calculate the ratio of the **sums** of all differences. But wait—it's not that simple. While summing the differences is a good idea, we can't directly use the sum of differences. Why not?  
 
@@ -256,11 +258,10 @@ Finally, we can express $R^2$ in two different ways:
 
   $$R^2 = \frac{\text{Regression}}{\text{Measurement}} = \frac{SSR}{SST} = 1 - \frac{SSE}{SST}$$
 
-   -$SSR$: Distance between the **mean** and the **predicted value**.  
-   -$SST$: Distance between the **mean** and the **actual value**.  
-   -$SSE$: Distance between the **actual value** and the **predicted value**.  
+* $SSR$ : Distance between the **mean** and the **predicted value**.  
+* $SST$ : Distance between the **mean** and the **actual value**.  
+* $SSE$ : Distance between the **actual value** and the **predicted value**.  
 
----
 
 ## TODOs  
 
