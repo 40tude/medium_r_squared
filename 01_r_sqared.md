@@ -264,13 +264,13 @@ Finally, we can express $ R^2 $ in two different ways:
    R^2 = \frac{\text{Regression}}{\text{Measurement}} = \frac{SSR}{SST} = 1 - \frac{SSE}{SST}
    $$
 
-   - $ SSR $: Distance between the **mean** and the **predicted value**.  
-   - $ SST $: Distance between the **mean** and the **actual value**.  
-   - $ SSE $: Distance between the **actual value** and the **predicted value**.  
+   - $SSR$: Distance between the **mean** and the **predicted value**.  
+   - $SST$: Distance between the **mean** and the **actual value**.  
+   - $SSE$: Distance between the **actual value** and the **predicted value**.  
 
 ---
 
 ## TODOs  
 
 - Research **Adjusted $ R^2 $** and how it accounts for model complexity.  
-- Read the article: *[What’s Wrong With R-Squared (And How to Fix It)](https://towardsdatascience.com)* by Samuele Mazzanti on *Towards Data Science*.  
+- Read the article: [What’s Wrong With R-Squared (And How to Fix It)](https://medium.com/towards-data-science/whats-wrong-with-r-squared-and-how-to-fix-it-7362c5f26c53) by Samuele Mazzanti.  
