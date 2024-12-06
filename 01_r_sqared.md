@@ -116,7 +116,7 @@ Next, we'll define $SST$, where "T" stands for Total. This is the distance betwe
 
 *Wait, wait… What are these "SS" terms that just appeared out of nowhere?* For now, trust me—we'll justify them in a couple of paragraphs. Trust in me, just in me…  
 
-*OK, but you mentioned we're going to compare values. So, I was expecting to compare $SST$ (the difference between the baseline model's prediction and the true value) with something not named in your diagram but representing the difference between the green curve and the true value from the ranger.* That's an excellent observation. Actually, there are two ways to approach this, and I made a choice. Again, bear with me—I'll discuss this at the end of the article.  
+*OK, but you mentioned we're going to compare values. So, I was expecting to compare* $SST$ *(the difference between the baseline model's prediction and the true value) with something not named in your diagram but representing the difference between the green curve and the true value from the ranger.* That's an excellent observation. Actually, there are two ways to approach this, and I made a choice. Again, bear with me—I'll discuss this at the end of the article.  
 
 Now, we're almost there. At this point, let's say:  
 
@@ -140,7 +140,7 @@ If the ratio equals 1, our model is fantastic—it perfectly matches reality. If
 
 $$R^2 = \frac{\text{Model}}{\text{Measure}} = \frac{\text{Regression}}{\text{Measure}} = \frac{SSR_{\text{regression}}}{SST_{\text{total}}}$$
 
-*Wait, wait… Can you go over that last sentence again? If $R^2 = 0$, does that mean the model is useless and we need to move on?* 
+*Wait, wait… Can you go over that last sentence again? If* $R^2 = 0$ *, does that mean the model is useless and we need to move on?* 
 
 No, not quite. If $R^2 = 0$, it means the numerator is 0. In other words, there's no difference between our model's predictions and the baseline model's predictions.  
 
