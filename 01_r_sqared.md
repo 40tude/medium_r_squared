@@ -70,9 +70,7 @@ And while we're at it, if tomorrow I have another a dark green line model (color
 
 This is where $R^2$ comes in. The idea is that it gives us a single value that helps us compare the performance of different models.  
 
-OK… How does it work? We want to compare models. Fair enough. But what would be the simplest possible model for our sequoia story?  
-
-One option could be a very unsophisticated model that always gives the same answer. It wouldn't respond with 0, since few sequoias have a trunk diameter of 0 m. Nor would it respond with 11 m, as there's only one General Sherman. A reasonable approach for a “not-so-smart” model would be to always predict the **average** of all measurements.  
+OK… How does it work? We want to compare models. Fair enough. But what would be the simplest possible model for our sequoia story? One option could be a very unsophisticated model that always gives the same answer. It wouldn't respond with 0, since few sequoias have a trunk diameter of 0 m. Nor would it respond with 11 m, as there's only one General Sherman. A reasonable approach for a “not-so-smart” model would be to always predict the **average** of all measurements.  
 
 The situation would look like this:  
 
@@ -86,7 +84,7 @@ Here, I've drawn a horizontal blue line at a height of $\bar{y}$ (notice the bar
 
 Now, let's take a specific $x_i$. The simple model predicts $\bar{y}$ (e.g., 1_250 years), while my model predicts $\hat{y}_i$, which is the height (y-value) at the point where the vertical line through $x_i$ intersects the green line.  
 
-Hmm... Earlier, we saw a gap between the true value and the predicted value of the model. Now we also see a gap but between the “not-so-smart” model and my model. What's the point?  
+*Hmm... Earlier, we saw a gap between the true value and the predicted value of the model. Now we also see a gap but between the “not-so-smart” model and my model. What's the point?*  
 
 The key takeaway here is that the model returning the average serves as a **benchmark** or **reference point**. Moving forward, we'll create a method to compare our model against this benchmark. Later, if we compare another model to the same benchmark, we'll also be able to compare the two models with each other.  
 
@@ -114,7 +112,9 @@ Don't panic, bear with me. Our model is a regression—hence the "R." Above, $SS
 
 Next, we'll define $SST$, where "T" stands for Total. This is the distance between the true value (given by the park ranger) and the average predicted by the baseline model.  
 
-*Wait, wait… What are these "SS" terms that just appeared out of nowhere?* For now, trust me—we'll justify them in a couple of paragraphs. Trust in me, just in me…  
+*Wait, wait… What are these "SS" terms that just appeared out of nowhere?* 
+
+For now, trust me—we'll justify them in a couple of paragraphs. Trust in me, just in me…  
 
 *OK, but you mentioned we're going to compare values. So, I was expecting to compare* $SST$ *(the difference between the baseline model's prediction and the true value) with something not named in your diagram but representing the difference between the green curve and the true value from the ranger.* That's an excellent observation. Actually, there are two ways to approach this, and I made a choice. Again, bear with me—I'll discuss this at the end of the article.  
 
@@ -140,7 +140,7 @@ If the ratio equals 1, our model is fantastic—it perfectly matches reality. If
 
 $$R^2 = \frac{\text{Model}}{\text{Measure}} = \frac{\text{Regression}}{\text{Measure}} = \frac{SSR_{\text{regression}}}{SST_{\text{total}}}$$
 
-*Wait, wait… Can you go over that last sentence again? If* $R^2 = 0$ *, does that mean the model is useless and we need to move on?* 
+*Wait, wait… Can you go over that last sentence again? If* $R^2 = 0$*, does that mean the model is useless and we need to move on?* 
 
 No, not quite. If $R^2 = 0$, it means the numerator is 0. In other words, there's no difference between our model's predictions and the baseline model's predictions.  
 
