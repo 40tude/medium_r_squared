@@ -70,7 +70,18 @@ And while we're at it, if tomorrow I have another a dark green line model (color
 
 This is where $R^2$ comes in. The idea is that it gives us a single value that helps us compare the performance of different models.  
 
-OK… How does it work? We want to compare models. Fair enough. But what would be the simplest possible model for our sequoia story? One option could be a very unsophisticated model that always gives the same answer. It wouldn't respond with 0, since few sequoias have a trunk diameter of 0 m. Nor would it respond with 11 m, as there's only one General Sherman. A reasonable approach for a “not-so-smart” model would be to always predict the **average** of all measurements.  
+OK… How does it work? We want to compare models. Fair enough. But what would be the simplest possible model for our sequoia story? One option could be a very unsophisticated model that always gives the same answer. It wouldn't respond with 0, since few sequoias have a trunk diameter of 0 m. Nor would it respond with 11 m, as there's only one General Sherman. A reasonable approach for a “not-so-smart” model would be to always predict the **average** of all measurements. 
+
+*Wait wait wait… Where does this average come from?*
+
+Let's say I have a set of values: 18, 12, 13, 17 and 15.  
+I'm trying to determine a value which, when announced in place of any other value in the set, will minimize the error between this value and reality.  
+Let's take an extreme example… If I say the value in question is 100, is that a good value? No, because the difference between 100 and any of the values in my set is very large. 100 is not an "optimal" representative of the dataset.  
+Similarly, 10 isn't a good value either, because it's too small.  
+In short, I'm looking for x such that the sum of the deviations (x-18) + (x-12) + (x-13) + (x-17) + (x-15) is minimal.  
+So, an x such that 5x - (18+12+13+17+15) = 0  
+As a result, for x we find the expression for the arithmetic mean x = (18+12+13+17+15)/5  
+OK? Let's continue.    
 
 The situation would look like this:  
 
